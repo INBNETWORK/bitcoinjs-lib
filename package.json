@@ -1,8 +1,8 @@
 {
   "name": "bitcoinjs-lib",
-  "version": "4.0.7",
+  "version": "4.0.8",
   "description": "Client-side Bitcoin JavaScript library",
-  "main": "./bitcoinjs.min.js",
+  "main": "./src/index.js",
   "engines": {
     "node": ">=8.0.0"
   },
@@ -43,7 +43,6 @@
     "safe-buffer": "^5.1.1",
     "tiny-secp256k1": "^1.0.0",
     "typeforce": "^1.11.3",
-    "uglifyjs": "^2.4.11",
     "varuint-bitcoin": "^1.0.4",
     "wif": "^2.0.1"
   },
