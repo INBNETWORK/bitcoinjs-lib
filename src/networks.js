@@ -1,6 +1,7 @@
+"use strict";
+
 // https://en.bitcoin.it/wiki/List_of_address_prefixes
 // Dogecoin BIP32 is a proposed standard: https://bitcointalk.org/index.php?topic=409731
-
 module.exports = {
   bitcoin: {
     messagePrefix: '\x18Bitcoin Signed Message:\n',
@@ -35,4 +36,4 @@ module.exports = {
     scriptHash: 0xc4,
     wif: 0xef
   }
-}
+};

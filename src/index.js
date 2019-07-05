@@ -1,11 +1,12 @@
-const script = require('./script')
+"use strict";
+
+var script = require('./script');
 
 module.exports = {
   Block: require('./block'),
   ECPair: require('./ecpair'),
   Transaction: require('./transaction'),
   TransactionBuilder: require('./transaction_builder'),
-
   address: require('./address'),
   bip32: require('bip32'),
   crypto: require('./crypto'),
@@ -13,4 +14,4 @@ module.exports = {
   opcodes: require('bitcoin-ops'),
   payments: require('./payments'),
   script: script
-}
+};

@@ -1,17 +1,19 @@
+"use strict";
+
 // OP_0 {pubKeyHash}
+var bscript = require('../../script');
 
-const bscript = require('../../script')
-const OPS = require('bitcoin-ops')
+var OPS = require('bitcoin-ops');
 
-function check (script) {
-  const buffer = bscript.compile(script)
-
-  return buffer.length === 22 &&
-    buffer[0] === OPS.OP_0 &&
-    buffer[1] === 0x14
+function check(script) {
+  var buffer = bscript.compile(script);
+  return buffer.length === 22 && buffer[0] === OPS.OP_0 && buffer[1] === 0x14;
 }
-check.toJSON = function () { return 'Witness pubKeyHash output' }
+
+check.toJSON = function () {
+  return 'Witness pubKeyHash output';
+};
 
 module.exports = {
-  check
-}
+  check: check
+};

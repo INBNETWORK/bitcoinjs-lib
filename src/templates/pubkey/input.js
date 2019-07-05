@@ -1,15 +1,17 @@
+"use strict";
+
 // {signature}
+var bscript = require('../../script');
 
-const bscript = require('../../script')
-
-function check (script) {
-  const chunks = bscript.decompile(script)
-
-  return chunks.length === 1 &&
-    bscript.isCanonicalScriptSignature(chunks[0])
+function check(script) {
+  var chunks = bscript.decompile(script);
+  return chunks.length === 1 && bscript.isCanonicalScriptSignature(chunks[0]);
 }
-check.toJSON = function () { return 'pubKey input' }
+
+check.toJSON = function () {
+  return 'pubKey input';
+};
 
 module.exports = {
   check: check
-}
+};
